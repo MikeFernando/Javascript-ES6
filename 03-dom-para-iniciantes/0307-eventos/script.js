@@ -19,13 +19,13 @@
 // Selecione todos os elementos do site começando a partir do body,
 // ao clique mostre exatamente quais elementos estão sendo clicados
 { // RESPOSTA
-  function handleElementClick(event) {
-    console.log(event.currentTarget)
+  function handleShowElementBody(event) {
+    console.log(event.target)
   }
   
-  const fullElementsBody = document.querySelectorAll('body *')
-  fullElementsBody.forEach(element => {
-    // element.addEventListener('click', handleElementClick)
+  const elementsBody = document.querySelectorAll('body *')
+  elementsBody.forEach(element => {
+    element.addEventListener('click', handleShowElementBody)
   })
 }
 

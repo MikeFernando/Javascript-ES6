@@ -1,40 +1,52 @@
-// const h1 = document.querySelector('h1');
-// const animaisLista = document.querySelector('.animais-descricao');
-// console.log(h1.innerHTML)
-// console.log(h1.outerHTML)
+const h1 = document.querySelector('h1')
+h1.innerHTML = '<p>Novo Titulo</p>'
+h1.innerText = '<p>Novo Titulo</p>'
 
-// // h1.outerHTML = '<p>Novo Título</p>';
-// // console.log(animaisLista.innerHTML);
+const lista = document.querySelector('.animais-lista')
+//TRAVERSING = significa navegar pela dom utilizando suas propriedades e métodos
+lista.parentElement; // pai
+lista.parentElement.parentElement; // pai do pai
+lista.previousElementSibling; // elemento acima
+lista.nextElementSibling; // elemento abaixo
 
-// const lista = document.querySelector('.animais-lista');
+lista.children; // HTMLCollection com os filhos
+lista.children[0]; // primeiro filho
+lista.children[--lista.children.length]; // último filho
+lista.querySelector('li:last-child'); // último filho
+lista.querySelectorAll('li'); // todas as LI's
 
-// console.log(lista.children[--lista.children.length]);
-// console.log(lista.querySelector('li:last-child'));
+console.log(lista.firstChild) // primeiro node child
+console.log(lista.childNodes) // todos os node child
 
-// console.log(lista.previousSibling);
+const animaisDescricao = document.querySelector('.animais-descricao')
+const contato = document.querySelector('.contato');
+const titulo = contato.querySelector('.titulo');
 
-// const animais = document.querySelector('.animais');
-// const contato = document.querySelector('.contato');
-// const titulo = contato.querySelector('.titulo');
+const lastDD = document.querySelector('.faq-lista dd:last-child');
+contato.insertBefore(lastDD, titulo)
 
-// const mapa = document.querySelector('.mapa');
+const imgUrso = document.querySelector('img[src^="img/imagem3"]')
+const cloneImageUrso = imgUrso.cloneNode(imgUrso)
+const descriptionAnimaisUrso = animaisDescricao.querySelector('section:nth-child(3)')
+descriptionAnimaisUrso.appendChild(cloneImageUrso)
 
-// // contato.replaceChild(lista, titulo);
+const dadosContato = document.querySelector('.dados')
+const rua = document.querySelector('.dados li:nth-child(3)')
 
-// // // contato.insertBefore(animais, mapa);
+const terceiroDT = document.querySelector('.faq-lista dt:nth-child(5)')
+dadosContato.replaceChild(terceiroDT, rua)
 
-// const novoh1 = document.createElement('h1');
-// novoh1.innerText = 'Novo Título';
-// novoh1.classList.add('titulo');
+const novoH1 = document.createElement('h1')
+novoH1.innerText = 'Novo titulo'
+novoH1.classList.add('titulo')
 
-// mapa.appendChild(novoh1);
+const sectionAnimais = document.querySelector('.animais')
+const tituloAnimais = sectionAnimais.querySelector('h1')
 
-// console.log(novoh1);
+sectionAnimais.replaceChild(novoH1, tituloAnimais)
 
-// const h1 = document.querySelector('h1');
-// const faq = document.querySelector('.faq');
+const h1 = document.querySelector('h1')
+const faq = document.querySelector('.faq')
 
-// const cloneH1 = h1.cloneNode(true);
-
-// cloneH1.classList.add('azul');
-// faq.appendChild(cloneH1);
+const cloneH1 = h1.cloneNode(true)
+faq.appendChild(cloneH1)
