@@ -1,19 +1,18 @@
-const tabMenu = document.querySelectorAll('.js-tabmenu li');
-const tabContent = document.querySelectorAll('.js-tabcontent section');
+const tabmenu = document.querySelectorAll('.js-tabmenu li')
+const tabcontent = document.querySelectorAll('.js-tabcontent section')
 
-if(tabMenu.length && tabContent.length) {
-  tabContent[0].classList.add('ativo');
+if (tabmenu.length && tabcontent.length) {
+  tabcontent[0].classList.add('ativo')
 
   function activeTab(index) {
-    tabContent.forEach((section) => {
-      section.classList.remove('ativo');
-    });
-    tabContent[index].classList.add('ativo');
+    tabcontent.forEach(section => section.classList.remove('ativo'))
+    tabcontent[index].classList.add('ativo')
   }
-
-  tabMenu.forEach((itemMenu, index) => {
+  
+  tabmenu.forEach((itemMenu, index) => {
     itemMenu.addEventListener('click', () => {
-      activeTab(index);
-    });
-  });
+      activeTab(index)
+    })
+  })
 }
+

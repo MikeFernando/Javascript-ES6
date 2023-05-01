@@ -18,39 +18,39 @@
 
 // Selecione todos os elementos do site começando a partir do body,
 // ao clique mostre exatamente quais elementos estão sendo clicados
-{ // RESPOSTA
-  function handleShowElementBody(event) {
-    console.log(event.target)
-  }
+// { // RESPOSTA
+//   function handleShowElementBody(event) {
+//     console.log(event.target)
+//   }
   
-  const elementsBody = document.querySelectorAll('body *')
-  elementsBody.forEach(element => {
-    element.addEventListener('click', handleShowElementBody)
-  })
-}
+//   const elementsBody = document.querySelectorAll('body *')
+//   elementsBody.forEach(element => {
+//     element.addEventListener('click', handleShowElementBody)
+//   })
+// }
 
 // Utilizando o código anterior, ao invés de mostrar no console,
 // remova o elemento que está sendo clicado, o método remove() remove um elemento
-{ // RESPOSTA
-  function handleElementClick(event) {
-    // event.currentTarget.remove()
-  }
+// { // RESPOSTA
+//   function handleElementClick(event) {
+//     // event.currentTarget.remove()
+//   }
   
-  const fullElementsBody = document.querySelectorAll('body *')
-  fullElementsBody.forEach(element => {
-    element.addEventListener('click', handleElementClick)
-  })
-}
+//   const fullElementsBody = document.querySelectorAll('body *')
+//   fullElementsBody.forEach(element => {
+//     element.addEventListener('click', handleElementClick)
+//   })
+// }
 
 // Se o usuário clicar na tecla (t), aumente todo o texto do site. 
-{// RESPOSTA
+// {// RESPOSTA
   
-  function handlePressT(event) {
-    if (event.key === 't') {
-      console.log(event)
-      document.documentElement.classList.toggle('texto-maior')
-    }
-  }
+//   function handlePressT(event) {
+//     if (event.key === 't') {
+//       console.log(event)
+//       document.documentElement.classList.toggle('texto-maior')
+//     }
+//   }
 
-  window.addEventListener('keydown', handlePressT)
-}
+//   window.addEventListener('keydown', handlePressT)
+// }

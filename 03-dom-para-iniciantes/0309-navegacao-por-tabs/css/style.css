@@ -217,7 +217,7 @@ body {
 
 .js-tabcontent section.ativo {
   display: block !important;
-  animation: show .5s forwards;
+  animation: show 0.5s forwards;
 }
 
 @keyframes show {
@@ -227,6 +227,6 @@ body {
   }
   to {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0)
   }
 }
